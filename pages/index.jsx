@@ -1,36 +1,18 @@
 import Tag from '../Components/TitleName/TitleName'
 import { useState } from 'react';
-import "../config.json"
-function GlobalStyles()
-{
-    return (
-        <style global jsx>{`
-            * {
-                margin: 0;
-                padding: 0;
-                border-box: none;
-            }
-
-            body {
-                background-color: white;
-                font-family: sans-serif;
-                display: flex;
-                justify-content:center;
-                align-items: center;
-            }
-        `}</style>
-    )
-}
-
+import "../config.json";
+import {useRouter} from 'next/router';
+import GlobalStyles from '../Styles/generic/GlobalStyles'
 function Home()
 {
+    const Router = useRouter();
     const [username, setUsername] = useState("");
     const nameHandler = (e) => {
         setUsername(e.target.value);
     };
     const loginHandler = (e) => {
         e.preventDefault();
-        window.location.href = "/chat";
+        Router.push("/chat");
     }
     return (
     <div>
