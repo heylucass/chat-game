@@ -1,8 +1,9 @@
 import MsmBox from "../MsmBox/MsmBox"
 export default function DisplayBox(props) {
+    const array = props.list;
     
     return (<>
-        <div id="display" className="display">{props.list.map((msmUpdated) => {
+        <div id="display" className="display">{array.map((msmUpdated) => {
             return (
                 <MsmBox updated={msmUpdated}/>
             )

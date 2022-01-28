@@ -85,4 +85,5 @@ function Home()
     </div>
         )
 }
-export default Home
+export default Home;
+export { username } from './chat.jsx'
