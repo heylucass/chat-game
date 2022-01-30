@@ -7,23 +7,33 @@ export default function DisplayBox(props) {
             return (
                 <div key={msmUpdated.id} className="msm-Container">
                 <span>
-                    <img src={`https://github.com/${msmUpdated.de}.png`} alt="fotu" />
+                    <img className="profileImg" src={`https://github.com/${msmUpdated.de}.png`} alt="fotu" />
                     <p className="msm-Owner">{msmUpdated.de}</p>
                     <p className="msm-Date">{(new Date().toLocaleDateString())}</p>
                 </span><br />
-                <h5 className="msm-Content">{msmUpdated.texto}</h5><br />
+                <h5 className="msm-Content">
+                    
+                    {msmUpdated.texto.startsWith(':stick:') ? (<img className='stickImg' src={msmUpdated.texto.replace(':stick:', '')}/>) : (msmUpdated.texto)}
+                
+                </h5><br />
             </div>
             )
         })}
         </div>
         <style jsx>{`.display {
-                    width: 95%;
-                    height: 78%;
+                    width: 93%;
+                    height: 80%;
                     background-color: #202220;
                     border-radius: 8px;
                     margin-bottom: 12px;
                     color: whitesmoke;
                     overflow: auto;
+                    margin-top: 5px;
+                }
+                .stickImg {
+                    border-radius: 8px;
+                    width: 50px;
+                    height: 66px;
                 }    
                 .display::-webkit-scrollbar-track {
                     box-shadow: inset 0 0 5px grey;
@@ -54,7 +64,7 @@ export default function DisplayBox(props) {
                     height: 1px;
                     margin-left: 4px;
                 }
-                img {
+                .profileImg {
                     border-radius: 50%;
                     width: 25px;
                     height: 25px;
@@ -64,6 +74,7 @@ export default function DisplayBox(props) {
                   margin-right: 15px;
                   height: 12px;
                   margin-top: 2px;
+                  margin-bottom: 5px;
                 }
                 .msm-Date {
                   font-size: 0.7rem;
@@ -72,7 +83,7 @@ export default function DisplayBox(props) {
                   margin-bottom: 10px;
                 }
                 .msm-Content {
-                    height: 12px;
+                    height: 40px;
                     margin-left: 4px;
                     margin-top: 5px;
                 }
