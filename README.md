@@ -28,7 +28,7 @@ Project created in immersion React @alura.
 
 ## Because?
 to challenge me, I did the project without the *@skynexui/components*, but it is recommended that you use it because it makes it more practical to use 'React'...
-I'm still studying react, so I just used other libraries.
+I'm still studying react, so I didn't use other libraries.
 
 ## References 
 All refs are in refs.json,
