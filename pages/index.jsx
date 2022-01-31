@@ -1,9 +1,7 @@
 import Tag from '../Components/TitleName/TitleName'
 import { useState } from 'react';
-import "../config.json";
 import { useRouter } from 'next/router';
 import GlobalStyles from '../Styles/generic/GlobalStyles';
-import BackgroundImg from '../Components/BackgroundImg/BackgroundImg'
 function Home() {
     const imgBorder = 'https://ia801605.us.archive.org/14/items/RetroArchOverLays/gba.png'
 
@@ -21,7 +19,7 @@ function Home() {
         <>
             <div>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
                 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
                 <section>
                     <Tag tag="h1">Chat Game</Tag> <br />

@@ -31,9 +31,11 @@ export function ButtonSendSticker(props) {
       <style jsx>{`
             div {
                 position: relative;
+                display: flex;
             }
             button {
-                    border-radius: 50%;
+                    border-radius: 25%;
+                    border: none;
                     padding: 0 3px 0 0;
                     min-width: 50px;
                     min-height: 50px;
@@ -43,7 +45,12 @@ export function ButtonSendSticker(props) {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #9AA5B1;
+                    background-color: #BA1200;
+                    transition-duration: 0.4s;
+            }
+            button:hover {
+              opacity: 0.7;
+              background-color: #6F68D1;
             }
             .divinside {
                     display: flex;
@@ -51,7 +58,7 @@ export function ButtonSendSticker(props) {
                     border-radius: 5px;
                     position: absolute;
                     background-color: #181F25;
-                    width: 200px;
+                    width: 210px;
                     height: 300px;
                     right: 30px;
                     bottom: 30px;
@@ -74,7 +81,18 @@ export function ButtonSendSticker(props) {
                     width: 50%;
                     border-radius: 5px;
                     padding: 10px;
+                    transition-duration: 0.5s;
+                    justify-content: center;
+                    align-items: center;
                                 
+            }
+            li:hover {
+              opacity: 0.6;
+              background-color: grey;
+            }
+            img {
+              width: 99%;
+              height: 65%;
             }
       `}</style>
     </div>

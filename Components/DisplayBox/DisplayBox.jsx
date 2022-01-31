@@ -25,7 +25,7 @@ export default function DisplayBox(props) {
                     height: 80%;
                     background-color: #202220;
                     border-radius: 8px;
-                    margin-bottom: 12px;
+                    margin-bottom: 10px;
                     color: whitesmoke;
                     overflow: auto;
                     margin-top: 5px;
