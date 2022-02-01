@@ -1,10 +1,11 @@
 {
     "extras": {
-      "Violet-blue-Crayola": "#6F68D1",
+    "Violet-blue-Crayola": "#6F68D1",
     "international-orange-engineering": "#BA1200",
-    "light-cornflower-blue": "#9DD1F1",
-    "blue-ncs":"#508AA8",
-    "eerie-black": "#202220"
+    "Dark-purple": "#242038",
+    "Amethyst":"#9067C6",
+    "Linen": "#F7ECE1",
+    "Middle-Blue-Purple": "#8D86C9"
     },
 
     "src-image-gba": "https://ia801605.us.archive.org/14/items/RetroArchOverLays/gba.png",

@@ -1,6 +1,10 @@
-//import MsmBox from "../MsmBox/MsmBox"
 export default function DisplayBox(props) {
     const array = props.list;
+    //const deleteFunc = props.btnDel;
+    // function deleteMsm(Msm) {
+    //     console.log('Mensagem sendo deletada', Msm)
+    //     sbClient.from('MessageList').delete().match({ id: Msm });
+    // };
     
     return (<>
         <div id="display" className="display">{array.map((msmUpdated) => {
@@ -16,6 +20,7 @@ export default function DisplayBox(props) {
                     {msmUpdated.texto.startsWith(':stick:') ? (<img className='stickImg' src={msmUpdated.texto.replace(':stick:', '')}/>) : (msmUpdated.texto)}
                 
                 </h5><br />
+                <h6 onClick={() => {if(Boolean(props.onDelete))props.onDelete(msmUpdated)}}></h6>
             </div>
             )
         })}
@@ -23,7 +28,7 @@ export default function DisplayBox(props) {
         <style jsx>{`.display {
                     width: 93%;
                     height: 80%;
-                    background-color: #202220;
+                    background-color: #242038;
                     border-radius: 8px;
                     margin-bottom: 10px;
                     color: whitesmoke;

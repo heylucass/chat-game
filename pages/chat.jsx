@@ -10,8 +10,8 @@ const sbClient = createClient(sbUrl, sbANNON_KEY);
 const imgBack = 'https://ia801605.us.archive.org/14/items/RetroArchOverLays/gba.png';
 
 function RealTimeMsmListener(addMsmRT) {
-    sbClient.from('MessageList').on('INSERT', (resRT) => {
-        console.log('Mensagem inserida no DB', resRT.new );
+    sbClient.from('MessageList').on('*', (resRT) => {
+        console.log('Database foi atualizado', resRT.new );
         addMsmRT(resRT.new);
     }).subscribe();
 };
@@ -59,6 +59,12 @@ export default function ChatGame()
         setMessage("")
 
     };
+    // function deleteMsm(proto) {
+    //     //console.log('mensagem deletada', proto);
+    //     sbClient.from('MessageList').delete().match({id: proto}).then(({data}) => {
+    //         console.log('fetch enviado', data)
+    //     })
+    // }
 
     return (<>
         <div>
@@ -67,7 +73,10 @@ export default function ChatGame()
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
             <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
                 <button onClick={routerHome}>Sair</button>
-                <DisplayBox list={listMsm}/>
+                <DisplayBox onDelete={(msmUpdated) => {
+                    //console.log('proto recebida', msmUpdated.id)
+                    //deleteMsm(msmUpdated.id)
+                }}  list={listMsm}/>
                 <div className="divController">
                     <input placeholder=" Digite sua mensagem!" className="chatInput" type="text" value={message}
                     onChange={msmHandler} onKeyPress={(e) => {
@@ -100,18 +109,23 @@ export default function ChatGame()
         }
         button {
             font-size: 1.1rem;
-            background-color: #BA1200;
+            background-color:#6F68D1;
             font-family: 'Press Start 2P', cursive;
             color: whitesmoke;
             padding: 5px;
             border: none;
             border-radius: 8px;
             margin-top: 2px;
+            transition-duration: 0.5s;
+        }
+        button:hover {
+            background-color:#8D86C9 ;
+            opacity: 0.7;
         }
         .chatContainer {
             width: 55vw;
             height: 70vh;
-            background-color: #6F68D1;
+            background-color: #9067C6;
             border-radius: 8px;
             display: flex;
             flex-direction: column;
@@ -125,7 +139,7 @@ export default function ChatGame()
             width: 90%;
             height: 50%;
             margin-right: 8px;
-            background-color: #202220;
+            background-color:#242038;
             border-radius: 5px;
             border: none;
             font-size: 1.2rem;

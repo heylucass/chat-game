@@ -45,12 +45,12 @@ export function ButtonSendSticker(props) {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #BA1200;
+                    background-color: #6F68D1;
                     transition-duration: 0.4s;
             }
             button:hover {
               opacity: 0.7;
-              background-color: #6F68D1;
+              background-color: #8D86C9;
             }
             .divinside {
                     display: flex;

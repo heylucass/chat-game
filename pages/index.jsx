@@ -42,7 +42,7 @@ function Home() {
                         align-items: center;
                         width: 54vw;
                         height: 65vh;
-                        background-color: grey;
+                        background-color: #9067C6;
                         border-radius: 8px;
                         font-family: 'Press Start 2P', cursive;
                     }    
@@ -55,7 +55,7 @@ function Home() {
                     .ImgDiv {
                         width: 15vw;
                         height: 25vh; 
-                        background-color: #202220;
+                        background-color: #242038;
                         border: 1px solid black;
                         display: flex;
                         justify-content: center;
@@ -64,24 +64,24 @@ function Home() {
                         font-family: courier new;
                     }
                     section{
-                        margin-right: 20px;
+                        margin-right: 50px;
                         width: 20vw;
                         height: 23vh;
                         font-family: 'Press Start 2P', cursive;
                     }
                     .NameInput {
                         border: 1px solid #202211;
-                        background-color: #202220;
+                        background-color: #242038;
                         border-radius: 5px;
                         padding: 5px;
                         color: whitesmoke;
                         margin-top: 5px;
                         font-family: 'Press Start 2P', cursive;
                         margin-right: 5px;
-                        max-width: 250px;
+                        max-width: 210px;
                     }
                     .SubInput {
-                        background-color: #BA1200;
+                        background-color: #F7ECE1;
                         margin-top: 5px;
                         font-family: 'Press Start 2P', cursive;
                         padding: 12px;
@@ -97,4 +97,3 @@ function Home() {
     )
 }
 export default Home;
-export { username } from './chat.jsx'
